@@ -47,7 +47,10 @@ public class securityConfig {
 				.build();
 
 		return new InMemoryUserDetailsManager(user);
+
+
 	}
+
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
