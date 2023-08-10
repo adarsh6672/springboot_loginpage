@@ -33,7 +33,7 @@ public class securityConfig {
 								.permitAll()
 				)
 				.logout()
-				.logoutSuccessUrl("/login")
+				.logoutSuccessUrl("/login?logout")
 				.deleteCookies("JSESSIONID");
 
 		return http.build();
@@ -42,7 +42,7 @@ public class securityConfig {
 	@Bean
 	public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 		UserDetails user = User.withUsername("adarsh")
-				.password(encoder.encode("1234"))
+				.password(encoder.encode("adarsh"))
 				.roles("USER")
 				.build();
 
