@@ -32,9 +32,6 @@ public class authController {
 		return "redirect:/hello";
 	}
 
-//	public String login() {
-//		return "login";
-//	}
 	@GetMapping("/hello")
 	public String hello() {
 		return "hello";
